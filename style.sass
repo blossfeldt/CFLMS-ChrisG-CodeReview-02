@@ -1,0 +1,241 @@
+$width_phone: 480px
+$width_tablet: 1200px
+$font_size: 1.9vw
+$spacing-lr: 3%
+$article_c_top_h: 45vw
+$article_c_bottom_h: 58vw
+
+%flex_wrap
+	display: flex
+	flex-wrap: wrap
+
+%flex_wrap_sb
+	@extend %flex_wrap
+	justify-content: space-between
+
+%full_width
+	width: 100%
+
+%menu_format
+	display: flex
+	padding: 0.5vw $spacing-lr 0.5vw $spacing-lr
+	list-style-type: none
+
+%menu_text
+	color: white
+
+%article_title
+	font-weight: 50
+	background: black
+	color: white
+	padding-top: 1vw
+	padding-bottom: 0.5vw
+	padding-left: 0.5vw
+	padding-right: 0.5vw
+
+%news_head
+	@extend %full_width
+	background: #dddddd
+	font-size: $font_size*1.25
+	height: 3vw
+
+%side_banner
+	margin-left: 1%
+	img
+		width: auto
+		height: auto
+		object-fit: fill
+
+@media screen and (max-width: $width_phone)
+	#banner_side_top, #banner_side_bottom, #banner_head, #banner_howto
+		display: none
+	#nav_top ul, #nav_bottom ul , #logo_footer
+		justify-content: center
+	#logo_footer img
+		height: 5vw
+	#article_top_column article
+			width: 1/2*100%-$spacing-lr*0.75
+	.img_container_small
+		height: 20vw
+	#banner_fswd_mobile
+		width: 1/2*100%-$spacing-lr*0.75
+	#banner_fswd_mobile img
+		object-fit: cover
+		height: 23.4vw
+
+@media screen and (min-width: $width_phone + 1px) and (max-width: $width_tablet)
+	#banner_side_top, #banner_side_bottom
+		display: none
+	#article_top_column	article 
+		width: 1/3*100%-$spacing-lr/2
+	.img_container_small
+		height: 13.5vw
+	#banner_fswd_mobile
+		display: none
+	#logo_footer
+		justify-content: flex-end
+
+@media screen and (min-width: $width_tablet + 1px)
+	#main
+		height: ($article_c_top_h+$article_c_bottom_h)*1.3
+	#main_top
+		height: $article_c_top_h+9vw
+		margin-bottom: -10vw
+	#article_top_column
+		flex: 5/7*100%
+		height: $article_c_top_h
+	#article_top_column	article 
+		width: 1/3*100%-$spacing-lr/2
+	.img_container_small
+		height: 13.5vw
+	#banner_fswd_mobile
+		display: none
+	#main_bottom
+		height: 50vw
+		margin-top: -10vw
+	#article_bottom_column
+		flex: 5/7*100%
+		height: $article_c_bottom_h
+	#logo_footer
+		justify-content: flex-end
+
+*
+	box-sizing: border-box
+	font-family: sans-serif
+	padding: 0
+	margin:0
+	a
+		text-decoration: none
+//	border: 1px solid
+
+#header
+	@extend %flex_wrap
+	@extend %full_width
+	height: 13vw
+
+#head_container
+	@extend %full_width
+	display: flex
+	justify-content: space-between
+	align-items: center
+	background: #551718
+	padding: 0 $spacing-lr 0 $spacing-lr
+	height: 10vw
+
+#logo
+	img
+		width: auto
+		height: 4vw
+
+#banner_head
+	img
+		width: auto
+		height: 8vw
+
+#nav_top
+	@extend %full_width
+	height: 3vw
+	ul
+		@extend %menu_format
+		background: #1a1a1a
+		
+.menuitem
+	padding-right: 1em
+	a
+		@extend %menu_text
+		font-size: $font_size
+
+#main
+	@extend %flex_wrap_sb
+	margin-top: 1%
+	margin-left: $spacing-lr
+	margin-right: $spacing-lr
+	img
+		@extend %full_width
+
+#main_top
+	@extend %flex_wrap_sb
+
+#date
+	@extend %full_width
+	text-align: right
+	font-size: $font_size*0.75
+
+#top_news
+	@extend %news_head
+
+#article_top_column
+	@extend %flex_wrap_sb
+	article h3
+		@extend %article_title
+		font-size: $font_size*0.75
+
+#popular
+	@extend %news_head
+
+.img_container_small
+	overflow: hidden
+	img
+		object-fit: cover	
+
+
+#banner_side_top
+	@extend %side_banner
+	img
+		height: $article_c_top_h*0.96
+
+
+#banner_howto
+	flex: 1
+	align-self: baseline
+	height: 5vw
+	margin-left: 5%
+	margin-right: 5%
+
+#main_bottom
+	@extend %flex_wrap_sb
+
+#article_bottom_column
+	@extend %flex_wrap_sb
+	article
+		width: 1/2*100%-$spacing-lr*0.75
+		h3
+			@extend %article_title
+			font-size: $font_size
+
+.img_container_big
+	height: 20vw
+	overflow: hidden
+	img
+		object-fit: cover
+
+#banner_side_bottom
+	@extend %side_banner
+	img
+		height: $article_c_bottom_h*0.95
+
+#nav_bottom
+	ul
+		@extend %menu_format
+		background: #1a1a1a
+		li
+			padding-right: 1em
+			a
+				@extend %menu_text
+				font-size: $font_size*0.75
+
+
+#footer
+	background:	#171717
+	text-align: center
+	height: 10vw
+	p
+		color: white
+		font-size: $font_size*0.5
+
+#logo_footer
+	display: flex
+	align-items: center
+	margin-right: $spacing-lr
+	img
+		height: 3vw

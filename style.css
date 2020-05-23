@@ -1,0 +1,269 @@
+#header, #article_bottom_column, #main_bottom, #article_top_column, #main_top, #main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#article_bottom_column, #main_bottom, #article_top_column, #main_top, #main {
+  justify-content: space-between;
+}
+
+#date, #main img, #nav_top, #head_container, #header, #popular, #top_news {
+  width: 100%;
+}
+
+#nav_bottom ul, #nav_top ul {
+  display: flex;
+  padding: 0.5vw 3% 0.5vw 3%;
+  list-style-type: none;
+}
+
+#nav_bottom ul li a, .menuitem a {
+  color: white;
+}
+
+#article_bottom_column article h3, #article_top_column article h3 {
+  font-weight: 50;
+  background: black;
+  color: white;
+  padding-top: 1vw;
+  padding-bottom: 0.5vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+}
+
+#popular, #top_news {
+  background: #dddddd;
+  font-size: 2.375vw;
+  height: 3vw;
+}
+
+#banner_side_bottom, #banner_side_top {
+  margin-left: 1%;
+}
+#banner_side_bottom img, #banner_side_top img {
+  width: auto;
+  height: auto;
+  object-fit: fill;
+}
+
+@media screen and (max-width: 480px) {
+  #banner_side_top, #banner_side_bottom, #banner_head, #banner_howto {
+    display: none;
+  }
+
+  #nav_top ul, #nav_bottom ul, #logo_footer {
+    justify-content: center;
+  }
+
+  #logo_footer img {
+    height: 5vw;
+  }
+
+  #article_top_column article {
+    width: 47.75%;
+  }
+
+  .img_container_small {
+    height: 20vw;
+  }
+
+  #banner_fswd_mobile {
+    width: 47.75%;
+  }
+
+  #banner_fswd_mobile img {
+    object-fit: cover;
+    height: 23.4vw;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1200px) {
+  #banner_side_top, #banner_side_bottom {
+    display: none;
+  }
+
+  #article_top_column article {
+    width: 31.8333333333%;
+  }
+
+  .img_container_small {
+    height: 13.5vw;
+  }
+
+  #banner_fswd_mobile {
+    display: none;
+  }
+
+  #logo_footer {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1201px) {
+  #main {
+    height: 133.9vw;
+  }
+
+  #main_top {
+    height: 54vw;
+    margin-bottom: -10vw;
+  }
+
+  #article_top_column {
+    flex: 71.4285714286%;
+    height: 45vw;
+  }
+
+  #article_top_column article {
+    width: 31.8333333333%;
+  }
+
+  .img_container_small {
+    height: 13.5vw;
+  }
+
+  #banner_fswd_mobile {
+    display: none;
+  }
+
+  #main_bottom {
+    height: 50vw;
+    margin-top: -10vw;
+  }
+
+  #article_bottom_column {
+    flex: 71.4285714286%;
+    height: 58vw;
+  }
+
+  #logo_footer {
+    justify-content: flex-end;
+  }
+}
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+* a {
+  text-decoration: none;
+}
+
+#header {
+  height: 13vw;
+}
+
+#head_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #551718;
+  padding: 0 3% 0 3%;
+  height: 10vw;
+}
+
+#logo img {
+  width: auto;
+  height: 4vw;
+}
+
+#banner_head img {
+  width: auto;
+  height: 8vw;
+}
+
+#nav_top {
+  height: 3vw;
+}
+#nav_top ul {
+  background: #1a1a1a;
+}
+
+.menuitem {
+  padding-right: 1em;
+}
+.menuitem a {
+  font-size: 1.9vw;
+}
+
+#main {
+  margin-top: 1%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+#date {
+  text-align: right;
+  font-size: 1.425vw;
+}
+
+#article_top_column article h3 {
+  font-size: 1.425vw;
+}
+
+.img_container_small {
+  overflow: hidden;
+}
+.img_container_small img {
+  object-fit: cover;
+}
+
+#banner_side_top img {
+  height: 43.2vw;
+}
+
+#banner_howto {
+  flex: 1;
+  align-self: baseline;
+  height: 5vw;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#article_bottom_column article {
+  width: 47.75%;
+}
+#article_bottom_column article h3 {
+  font-size: 1.9vw;
+}
+
+.img_container_big {
+  height: 20vw;
+  overflow: hidden;
+}
+.img_container_big img {
+  object-fit: cover;
+}
+
+#banner_side_bottom img {
+  height: 55.1vw;
+}
+
+#nav_bottom ul {
+  background: #1a1a1a;
+}
+#nav_bottom ul li {
+  padding-right: 1em;
+}
+#nav_bottom ul li a {
+  font-size: 1.425vw;
+}
+
+#footer {
+  background: #171717;
+  text-align: center;
+  height: 10vw;
+}
+#footer p {
+  color: white;
+  font-size: 0.95vw;
+}
+
+#logo_footer {
+  display: flex;
+  align-items: center;
+  margin-right: 3%;
+}
+#logo_footer img {
+  height: 3vw;
+}
+
+/*# sourceMappingURL=style.css.map */
